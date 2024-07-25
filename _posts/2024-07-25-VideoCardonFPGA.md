@@ -29,8 +29,7 @@ The CRT displays works on a simple yet very fast procedure of displaying images 
 H sync and V_sync 
 In the third week of our project, we started working on the H_sync and V_sync signals. Both these signals can be divided into 4 specific interval timings :the Visible area, Front porch, sync pulse and back porch. The Visible Area is the period during which the actual image data is displayed on the screen. It is the active portion where pixels are lit up to form the picture. Front Porch is a short interval after the visible area and before the sync pulse. It provides time for the electron beam (in CRTs) or the scanning process (in LCDs) to prepare for the sync pulse. Sync pulse is the part of the signal that resets the position of the beam or scans to the start of the next line (horizontal sync) or frame (vertical sync). It is essential for keeping the display in sync with the input signal.Last but not the least is the Back porch which follows the sync pulse and precedes the next visible area. It allows time for the display system to stabilize before drawing the next line or frame.We have decided to use a 800 * 600 VGA signals in our project and we have been able to output the above interval timings correctly on a Digital Signal Oscilloscope using the Arty A7 35 FPGA.
 
-<p style="text-align: center"><img src="https://github.com/MrCheese260/blog/blob/master/assets/posts/Video_card_on_FPGA/CRT-2.png"></p>
-
+![CRT_monitor](/assets/posts/Video_card_on_FPGA/CRT-2.png)
                  
 ### What we are working on now
 We have completed writing H_sync and V_sync signals script as well as tested the timings and waveforms on a Oscilloscope.
